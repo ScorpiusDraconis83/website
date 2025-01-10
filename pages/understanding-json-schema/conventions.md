@@ -1,6 +1,12 @@
 ---
 section: docs
 title: "Conventions used in this documentation"
+prev: 
+  label: Understanding JSON Schema
+  url: /understanding-json-schema
+next: 
+  label: What is a Schema?
+  url: /understanding-json-schema/about
 ---
 
 ## Language-specific notes
@@ -40,7 +46,7 @@ In Swift, JSON can be read using the `JSONDecoder` class.
 ## Draft-specific notes
 
 The JSON Schema standard has been through a number of revisions or
-\"drafts\". The current version is Draft 2020-12, but some older drafts
+[\"drafts\"](../learn/glossary#draft). The current version is Draft 2020-12, but some older drafts
 are still widely used as well.
 
 The text is written to encourage the use of Draft 2020-12 and gives
@@ -69,9 +75,6 @@ isn\'t valid.
 
 > These examples are tested automatically whenever the book is
 built, so hopefully they are not just helpful, but also correct!
-
-These examples are tested automatically whenever the book is built, so
-hopefully they are not just helpful, but also correct!
 
 For example, here\'s a snippet illustrating how to use the `number` type:
 

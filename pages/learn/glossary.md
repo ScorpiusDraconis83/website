@@ -1,6 +1,12 @@
 ---
 title: JSON Schema Glossary
 section: docs
+prev: 
+  label: Other Examples
+  url: /learn/json-schema-examples
+next: 
+  label: JSON Schema Keywords
+  url: /understanding-json-schema/keywords
 ---
 
 This document collects short explanations of terminology one may encounter within the JSON Schema community.
@@ -46,6 +52,18 @@ The two are, however, entirely different pieces of the conceptual puzzle, with J
 
 The JSON format is an open format, with its own [homepage](https://www.json.org/), and specifications published in the [ECMA-404](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/) and [RFC-8259](https://datatracker.ietf.org/doc/html/rfc8259) documents from ECMA and the IETF respectively.
 In particular, it is not managed or developed by the JSON Schema team, who simply make use of the format.
+
+### JSON Hyper-Schema
+
+JSON Hyper-Schema extends JSON Schema, offering a [vocabulary](#vocabulary) to annotate JSON documents with hypermedia controls. This extension facilitates the description of links and actions that can be executed on JSON data, making it a powerful tool for developing hypermedia-driven APIs.
+
+The essence of JSON Hyper-Schema lies in its ability to define links and actions that can be executed on JSON data. This is achieved through the use of the `links` keyword, which allows for the creation of dynamic, interactive data representations. For example, a JSON document representing a blog post might include an "author" property. The JSON Hyper-Schema that describes this document could include a template for a hypermedia control that uses the author's identifier in the [instance](#instance) to construct a link to the author's profile. The developer doesn't need to construct the URL manually, which enhances the developer experience by offering a seamless navigation experience.
+
+In other words, JSON Hyper-Schema extends JSON Schema by introducing features for creating hypermedia controls. This facilitates the creation of interactive APIs and ensures compatibility with existing JSON HTTP APIs, maintaining a seamless integration. It adds a layer of interactivity to JSON documents, making it easier to interact with remote JSON resources.
+
+### JSON pointer
+
+[JSON Pointer](https://datatracker.ietf.org/doc/html/rfc6901) is a string syntax for identifying a value at a specified location within a JSON document. It serves to precisely reference specific parts of the document for retrieval or manipulation. A subschema is often identified using a JSON Pointer, specifying its location within the containing resource.
 
 ### keyword
 
@@ -128,6 +146,10 @@ The following are considered tools:
 - a UI form generator
 
 Applications which use JSON Schema internally without exposing that functionality in some way, for example, validating configuration files or web requests, are not considered tooling.
+
+### validation result
+
+The [validation result](../blog/posts/get-started-with-json-schema-in-node-js#creating-a-schema-and-validating-data) in the context of JSON Schema refers to the outcome of applying the entire JSON Schema to the entire instance document. This outcome can encompass more than just a boolean assertion and may include various output formats, such as error messages, error codes, or detailed validation reports. It signifies whether the instance document adheres to the rules and constraints specified in the schema. The validation result signifies whether the instance document passes or fails validation against the [schema](#schema).
 
 ### vocabulary
 

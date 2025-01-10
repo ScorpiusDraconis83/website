@@ -1,9 +1,15 @@
 ---
 title: "null"
 section: docs
+prev: 
+  label: boolean
+  url: /understanding-json-schema/reference/boolean
+next: 
+  label: Generic Keywords
+  url: /understanding-json-schema/reference/generic
 ---
 
-When a schema specifies a `type` of `null`, it has only one acceptable value: `null`.
+When a [schema](../../learn/glossary#schema) specifies a `type` of `null`, it has only one acceptable value: `null`.
 
 > It's important to remember that in JSON, `null` isn't equivalent to something being absent. See [Required Properties](../../understanding-json-schema/reference/object#required) for an example.
 

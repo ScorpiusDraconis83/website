@@ -11,6 +11,10 @@
     clip-path: polygon(0 15%, 0 100%, 0% 100%, 100% 85%, 100% 0);
   }
 
+  .clip-top {
+    clip-path: polygon(0 15%, 0 100%, 0% 100%, 100% 100%, 100% 0);
+  }
+
   @media (min-width: 320px) and (max-width: 759px) {
     .clip-bottom {
       clip-path: polygon(0 0, 0 100%, 0% 100%, 100% 95%, 100% 0);
@@ -18,6 +22,10 @@
 
     .clip-both {
       clip-path: polygon(0 05%, 0 100%, 0% 100%, 100% 95%, 100% 0);
+    }
+
+    .clip-top {
+      clip-path: polygon(0 05%, 0 100%, 0% 100%, 100% 100%, 100% 0);
     }
   }
 }
@@ -28,28 +36,56 @@
 
 html {
   font-family: 'Inter', sans-serif;
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
 }
 
 .DocSearch-Button-Keys {
   display: none !important;
 }
 
-.DocSearch-Button-Container {
-  background-color: transparent !important;
-  width: 168px;
-  height: 32px;
-  padding: 8px 8px;
-  margin-right: 10px;
-  /* border: 1px solid #E3E8EE;
+/* .herobtn { */
+/* background-color: transparent !important; */
+/* justify-content: center; */
+/* width: 168px; */
+/* height: 32px; */
+/* padding: 8px 8px; */
+/* margin-right: 10px; */
+/* display: flex; */
+/* border: 1px solid #E3E8EE;
 border-radius: 4px; */
+/* } */
+
+/* @media (max-width: 1027px) { */
+.DocSearch-Button-Container {
+  height: 40px;
+  padding: 0px;
+  border: none;
 }
 
-@media (max-width: 730px) {
-  .DocSearch-Button-Container {
-    width: 40px;
-    height: 40px;
-    padding: 0px;
-    border: none;
+.DocSearch-Button {
+  margin: 0;
+  width: 39px;
+  background: none;
+}
+
+.DocSearch-Button-Placeholder {
+  display: none;
+}
+
+.DocSearch-Search-Icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* .herobtn .DocSearch-Button-Container {
+    margin-right: 4px;
+    margin-left: 4px;
+  } */
+
+@media (max-width: 450px) {
+  .DocSearch-Button {
+    margin: 0;
   }
 }
 
@@ -63,6 +99,22 @@ border-radius: 4px; */
 }
 
 /** Style Algolia */
+
+.keygrad {
+  --docsearch-key-gradient: linear-gradient(
+    -225deg,
+    #d5dbe4,
+    #f8f8f8
+  ) !important;
+}
+.keyshadow {
+  --docsearch-key-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #fff,
+    0 1px 2px 1px rgba(30, 35, 90, 0.4) !important;
+}
+.keyshadow[data-theme='dark'] {
+  --docsearch-key-shadow: inset 0 -2px 0 0 #ffffff, inset 0 0 1px 1px #ffffff,
+    0 2px 2px 0 rgba(3, 4, 9, 0.3) !important;
+}
 
 .search-input {
   flex-grow: 1;
@@ -143,16 +195,14 @@ border-radius: 4px; */
 }
 
 .herobtn span {
-  margin: 0 auto;
-}
-
-.herobtn span {
   color: white !important;
   font-weight: 600;
 }
 
 .herobtn svg {
   color: white !important;
+  width: 20px;
+  height: 20px;
 }
 
 .herobtn span:hover {
@@ -167,6 +217,80 @@ border-radius: 4px; */
 .anchor #community {
   position: absolute;
   left: 0;
-  top: -80px;
+  top: -35px;
   /* change this value to match the height of the header */
+}
+/* In your CSS file */
+.mt-custom {
+  margin-top: 4.4rem;
+}
+
+.top-12 {
+  top: 48px;
+}
+
+.bg-ambassador {
+  background-image: url(/img/community/ambassadors.png);
+}
+
+.bg-slack {
+  background-image: url(/img/home-page/slack.png);
+  background-size: 100% 100%;
+}
+
+.bg-meeting {
+  background-image: url(/img/event/meet.png);
+}
+
+.bg-blog {
+  background-image: url(/img/event/Json-Schema-Blog.png);
+}
+
+.bg-index-0 {
+  background-color: #a5b4fc8a;
+}
+
+.bg-index-1 {
+  background-color: #fca5a582;
+}
+
+.bg-index-2 {
+  background-color: #fdbb7483;
+}
+
+.bg-index-3 {
+  background-color: #86efad85;
+}
+
+.bg-index-4 {
+  background-color: #fddf4784;
+}
+
+.bg-index-5 {
+  background-color: #773cff84;
+}
+
+@layer base {
+  body {
+    @apply dark:bg-slate-800 bg-white;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.tools-dropdown-menu::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 5px;
+}
+
+.tools-dropdown-menu::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 8px;
+}
+
+.tools-dropdown-menu::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 8px;
 }

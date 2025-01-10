@@ -1,13 +1,15 @@
 ---
 title: "For Implementers"
 section: docs
+prev: 
+  label: Structuring a complex schema
+  url: /understanding-json-schema/structuring
+next: 
+  label: Common Interfaces across Implementations
+  url: /implementers/interfaces
 ---
 
 For Implementers
 =========================
 
 Welcome to the **Implementers** section! The place for implementation maintainers' Docs.
-
-What you'll find in this section?
-* [Common Interfaces across JSON Schema Implementations](./implementers/interfaces)
-* [Bowtie](https://docs.bowtie.report/en/stable/). The meta-validator for JSON Schema implementations

@@ -1,6 +1,12 @@
 ---
 section: docs
 title: Miscellaneous Examples
+prev : 
+  label: Creating your first Schema
+  url: /learn/getting-started-step-by-step
+next: 
+  label: Modelling a file system
+  url: /learn/file-system
 ---
 
 In this page, you will find miscellaneous examples illustrating different uses cases to help you get the most out of your JSON Schemas. Each example comes with accompanying JSON data and explanation.
@@ -91,7 +97,8 @@ For the `vegetables` property:
 {
   "$id": "https://example.com/arrays.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "A representation of a person, company, organization, or place",
+  "description": "Arrays of strings and objects",
+  "title": "Arrays",
   "type": "object",
   "properties": {
     "fruits": {

@@ -1,11 +1,17 @@
 ---
 title: "Schema Composition"
 section: docs
+prev: 
+  label: 'Media: string-encoding non-JSON data'
+  url: /understanding-json-schema/reference/non_json_data
+next: 
+  label: Applying Subschemas Conditionally
+  url: /understanding-json-schema/reference/conditionals
 ---
 
 <Keywords label="schema composition" />
 
-JSON Schema includes a few keywords for combining schemas together. Note
+JSON Schema includes a few [keywords](../../learn/glossary#keyword) for combining schemas together. Note
 that this doesn\'t necessarily mean combining schemas from multiple
 files or JSON trees, though these facilities help to enable that and are
 described in [Structuring a complex schema](../../understanding-json-schema/structuring). Combining schemas may be as
@@ -19,13 +25,13 @@ JSON Schema keywords.
 
 The keywords used to combine schemas are:
 
-- `allOf`: (AND) Must be valid against *all* of the subschemas
+- `allOf`: (AND) Must be valid against *all* of the [subschemas](../../learn/glossary#subschema)
 - `anyOf`: (OR) Must be valid against *any* of the subschemas
 - `oneOf`: (XOR) Must be valid against *exactly one* of the
     subschemas
 
 All of these keywords must be set to an array, where each item is a
-schema.
+schema. Be careful with recursive schemas as they can exponentially increase processing times.
 
 In addition, there is:
 
@@ -46,7 +52,6 @@ To validate against `allOf`, the given data must be valid against all of the giv
   ]
 }
 ```  
-A snippet of the British royal family tree
 
 ```json
 // props { "indent": true, "valid": true }
@@ -58,7 +63,7 @@ A snippet of the British royal family tree
 ```
 
 > [allOf](#allof) can not be used to \"extend\" a schema to add more
-details to it in the sense of object-oriented inheritance. Instances
+details to it in the sense of object-oriented inheritance. [Instances](../../learn/glossary#instance)
 must independently be valid against \"all of\" the schemas in the
 `allOf`. See the section on [Extending Closed Schemas](../../understanding-json-schema/reference/object#extending) for more
 information.
@@ -79,7 +84,6 @@ To validate against `anyOf`, the given data must be valid against any
   ]
 }
 ```  
-A snippet of the British royal family tree
 
 ```json
 // props { "indent": true, "valid": true }
@@ -91,7 +95,7 @@ A snippet of the British royal family tree
 ```
 ```json
 // props { "indent": true, "valid": true }
-12"
+12
 ```
 ```json
 // props { "indent": true, "valid": false }
@@ -134,6 +138,10 @@ Multiple of *both* 5 and 3 is rejected.
 // props { "indent": true, "valid": false }
 15
 ```
+
+<Warning>
+Careful consideration should be taken when using `oneOf` entries as the nature of it requires verification of *every* sub-schema which can lead to increased processing times. Prefer `anyOf` where possible.
+</Warning>
 
 <Keywords label="single: not single: schema composition; not" />
 

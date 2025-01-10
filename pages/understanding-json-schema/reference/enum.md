@@ -1,9 +1,15 @@
 ---
 title: "Enumerated values"
 section: docs
+prev: 
+  label: Comments
+  url: /understanding-json-schema/reference/comments
+next: 
+  label: Constant values
+  url: /understanding-json-schema/reference/const
 ---
 
-The `enum` keyword is used to restrict a value to a fixed set of values.
+The `enum` [keyword](../../learn/glossary#keyword) is used to restrict a value to a fixed set of values.
 It must be an array with at least one element, where each element is
 unique.
 

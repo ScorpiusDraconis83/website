@@ -1,12 +1,18 @@
 ---
 title: "Numeric types"
 section: docs
+prev: 
+  label: Regular Expressions
+  url: /understanding-json-schema/reference/regular_expressions
+next: 
+  label: Object
+  url: /understanding-json-schema/reference/object
 ---
 
 <Keywords label="single: integer single: number single: types; numeric" />
 
 There are two numeric types in JSON Schema: [integer](#integer) and [number](#number).
-They share the same validation keywords.
+They share the same validation [keywords](../../learn/glossary#keyword).
 
 > JSON has no standard way to represent complex numbers, so there is no
 way to test for them in JSON Schema.

@@ -1,13 +1,19 @@
 ---
 title: "boolean"
 section: docs
+prev: 
+  label: Array
+  url: /understanding-json-schema/reference/array
+next: 
+  label: 'Null'
+  url: /understanding-json-schema/reference/null
 ---
 
 <Keywords label="single: boolean" />
 
 The boolean type matches only two special values: `true` and `false`.
 Note that values that *evaluate* to `true` or `false`, such as 1 and 0,
-are not accepted by the schema.
+are not accepted by the [schema](../../learn/glossary#schema).
 
 [tabs-start "Language-specific info"]
 
