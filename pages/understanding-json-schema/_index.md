@@ -1,6 +1,12 @@
 ---
 title: "Understanding JSON Schema"
 section: docs
+prev: 
+  label: JSON Schema Keywords
+  url: /understanding-json-schema/keywords
+next: 
+  label: Conventions
+  url: /understanding-json-schema/conventions
 ---
 
 Understanding JSON Schema
@@ -35,7 +41,7 @@ in the text.
 -   [json-schema.org](http://json-schema.org) has a number of resources,
     including the official specification and tools for working with JSON
     Schema from various programming languages.
--   There are a number of [online JSON Schema tools](https://json-schema.org/implementations.html#validator-web%20(online))
+-   There are a number of [online JSON Schema tools](https://json-schema.org/tools#validator)
     that allow you to run your own JSON schemas against example
     documents. These can be very handy if you want to try things out
     without installing any software.

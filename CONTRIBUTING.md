@@ -6,7 +6,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 
 If you don't have time to contribute, that's fine. There are other easy ways to support the project and show your appreciation:
 - Star the project on Github
-- Post on Twitter or Linkedin about JSON Schema `#jsonschema
+- Post on X or Linkedin about JSON Schema `#jsonschema
 
 ## Table of Contents
 
@@ -21,8 +21,11 @@ If you don't have time to contribute, that's fine. There are other easy ways to 
   - 📋 [Improving the Documentation](#-improving-the-documentation)
   - 🌐 [Improving the website](#-improving-the-website)
   - 🎨 [Improving the Design](#-improving-the-design)
+  - 🚀 [Contributing to CI/CD Pipeline](#-contributing-to-cicd-pipeline)
+  - 🧪 [Contributing to Testing](#-contributing-to-testing)
 - ⌨️ [Pull requests](#%EF%B8%8F-pull-requests)
 - 🏛 [License](#-license)
+
 
 ## 🌱 Code of Conduct
 
@@ -58,9 +61,9 @@ To publish a case study, we encourage you to join `#adopters` channel in our [Sl
 
 ### 📋 Improving the Documentation
 
-If you would like to join the efforts to improve the JSON Schema Documentation, we encourage you to check our [documentation board](https://github.com/orgs/json-schema-org/projects/16) to get a sense of the pending issues and who is doing what. We encourage you to join the discussion on the [issue #421](https://github.com/json-schema-org/community/issues/421) so you can see the long term vision for our docs. We also invite you to join the discussion in `#documentation` channel in our  [Slack workspace](https://json-schema.org/slack).
+Want to help us improve the JSON Schema documentation? Check out our [docs Contributing guide](https://github.com/json-schema-org/website/blob/main/CONTRIBUTING-docs.md) for docs and Style guide. These documents will give you the basics of our processes to get you started and text-formatting guidelines to create consistent documentation for JSON Schema. 
 
-### 📋 Improving the Website
+### 🌐 Improving the Website
 
 If you would like to join the efforts to improve the JSON Schema Website, we encourage you to check our [website contribution board](https://github.com/orgs/json-schema-org/projects/11) to get a sense of the pending issues and bugs and who is doing what. We also invite you to join the discussion in `#website` channel in our  [Slack workspace](https://json-schema.org/slack).
 
@@ -68,15 +71,51 @@ If you would like to join the efforts to improve the JSON Schema Website, we enc
 
 If you would like to contribute with designs, we encourage you to join `#design` channel in our [Slack workspace](https://json-schema.org/slack) and read the [contributing guidelines](https://github.com/json-schema-org/brand/blob/master/CONTRIBUTING.md) in the [Brand](https://github.com/json-schema-org/brand) repository.
 
+### 🚀 Contributing to CI/CD Pipeline
+
+If you would like to contribute to our CI/CD pipeline, we encourage you to review our current setup in the [workflows README](https://github.com/json-schema-org/website/blob/main/.github/workflows/README.md).
+
+### 🧪 Contributing to Testing
+
+We value contributions to our testing efforts. Here are ways you can help improve our test coverage and quality:
+
+1. **Writing Tests**: If you're adding new features or fixing bugs, please include relevant tests. We use Cypress for both end-to-end (E2E) and component testing.
+
+   - For new components, add component tests in the `cypress/components` directory.
+   - For new features or bug fixes affecting user interactions, add E2E tests in the `cypress/e2e` directory.
+
+2. **Improving Existing Tests**: Review and enhance our existing test suite. Look for areas where test coverage could be improved or where tests could be made more robust.
+
+3. **Test Documentation**: Help improve our testing documentation, making it easier for new contributors to understand and write tests.
+
+4. **Running Tests**: Before submitting a pull request, ensure all tests pass by running:
+   ```
+   yarn cypress:run:all
+   ```
+
+5. **Reporting Test Issues**: If you find inconsistencies or problems with our tests, please open an issue describing the problem and how to reproduce it.
+
+For more details on our testing setup and how to run tests, please refer to the Testing section in our [INSTALLATION.md](./INSTALLATION.md#testing) file.
+
+
 ### ⌨️ Pull requests
 
 We welcome pull requests for editorial suggestions and resolving open issues.
 
-If the pull request would solve a particular issue, reference the issue in the pull request description using a [supported descriptor](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) that will automatically close that issue.
+If your pull request addresses a specific issue, please reference this issue in your pull request description using a [supported descriptor](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword). This helps automatically link and close the issue when the pull request is merged.
+
+We strongly encourage linking every pull request to an existing issue. If no corresponding issue exists, please create one first. This allows the community to discuss the required changes. If you are addressing an existing issue, ensure the scope is clear and consider the following:
+
+- If the issue is several years old, verify its relevance by asking in the comments.
+- Ensure the discussion within the issue has led to a clear, actionable decision.
 
 Generally, pull requests should be made to the `main` branch.
 
 Most PRs, will be left open for a minimum of 14 days.  Minor fixes may be merged more quickly once approved by a project member.
+
+### Markdown Style Guide
+
+Contributors to our Docs or our Blog can have a look at the [custom markdown style guide](https://json-schema.org/md-style-guide) with a list of useful markdown tags providing tools to easily create cool content that provides a better user experience.
 
 ## Triage
 

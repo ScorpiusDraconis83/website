@@ -1,12 +1,18 @@
 ---
 title: "Regular Expressions"
 section: docs
+prev: 
+  label: String
+  url: /understanding-json-schema/reference/string
+next: 
+  label: Numeric types
+  url: /understanding-json-schema/reference/numeric
 ---
 
 <Keywords label="regular expressions" />
 
 The [pattern](../../understanding-json-schema/reference/string#regexp) and
-[patternProperties](../../understanding-json-schema/reference/object#regexp) keywords use regular expressions to
+[patternProperties](../../understanding-json-schema/reference/object#regexp) [keywords](../../learn/glossary#keyword) use regular expressions to
 express constraints. The regular expression syntax used is from
 JavaScript ([ECMA 262](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/),
 specifically). However, that complete syntax is not widely supported,
@@ -47,7 +53,7 @@ described below.
     preceding regular expression.
 -   `{x,}`: Match `x` occurrences or more of the preceding regular
     expression.
--   `{x}?`, `{x,y}?`, `{x,}?`: Lazy versions of the above expressions.
+-   `{x,y}?`, `{x,}?`: Non-greedy versions of the above expressions.
 -   Use only standard escapes like ``\n``, ``\r``, ``\t`` and keep 
     in mind that you also need to do JSON escaping.
 
@@ -85,14 +91,17 @@ The following example checks that the string starts with `{{` and ends with `}}`
 and that it also allows multiline strings.
 
 ```json
-   {
-      "type": "string",
-      "pattern": "^\\{\\{(.|[\\r\\n])*\\}\\}$",
-   }
+// props { "isSchema": true }
+{
+  "type": "string",
+  "pattern": "^\\{\\{(.|[\\r\\n])*\\}\\}$",
+}
 ```
 ```json
-   "{{ foo\nbar }}"
+// props { "indent": true, "valid": true }
+"{{ foo\nbar }}"
 ```
 ```json
-   "{ foo }"
+// props { "indent": true, "valid": false }
+"{ foo }"
 ```

@@ -20,46 +20,15 @@
 </p>
 
 # 👋 Welcome to the JSON Schema website
-This repository contains the sources of JSON Schema website:
+This repository contains the source code of the JSON Schema website:
 
-* It's powered by Next.js,
-* It uses Tailwind CSS framework,
-* It's build and deployed with Netlify.
+* Powered by Next.js,
+* Uses the Tailwind CSS framework,
+* Built and deployed with Netlify.
 
-## Run locally
+## Setting up the Project
 
-#### Requirements
-Use the following tools to set up the project:
-
-Node.js v20.9.0+
-
-#### Cloning the repository
-This project uses git submodules, so you will need to run the following commands to fully clone the repo.
-```
-git submodule init
-git submodule update
-```
-
-#### Install dependencies
-
-Install dependencies
-```
-yarn
-```
-
-#### Run the development server
-
-Run the development server on http://localhost:3000
-```
-yarn dev
-```
-
-#### Build static files 
-
-Build static files on /out folder
-```
-yarn build
-```
+Please refer to [INSTALLATION.md](./INSTALLATION.md) for instructions on how to set up the project for local development.
 
 ## Project structure
 
@@ -68,41 +37,42 @@ This repository has the following structure:
 <!-- If you make any changes in the project structure, remember to update it. -->
 
 ```text
-  ├── .github                     # Definitions of GitHub workflows, pull request and issue templates
+  ├── .github                     # Definitions of GitHub workflows, pull request, and issue templates
   ├── components                  # Various generic components such as "Button", "Figure", etc.
-  ├── data                        # JSON Schema Implementations.
+  ├── data                        # JSON Schema implementations
   ├── styles                      # Various CSS files
-  ├── lib                         # Various JS code for preparing static data to render in pages
-  ├── pages                       # Website's pages source. It includes raw markdown files and React page templates.
+  ├── lib                         # Various JS code for preparing static data to render on pages
+  ├── pages                       # Website's pages source, including raw markdown files and React page templates
   │    ├── overview               # JSON Schema initiative docs
   │    ├── blog                   # Blog posts
   │    ├── learn                  # JSON Schema docs
   │    └── implementations        # Various pages to describe tools
-  ├── public                      # Data for site metadata and static blog such as images
+  ├── public                      # Data for site metadata and static assets such as images
   ├── next.config.js              # Next.js configuration file
 
 ```
 
 ## Contribute
-
 Here are some areas where you can contribute to the website:
-- Blogs posts
-- Case Studies
+
+- Blog posts
+- Case studies
 - Design
-- Documentation
+- Documentation improvements
 - Website enhancements
-- Add a new JSON Schema Implementation
+- Add a new JSON Schema implementation
 - JSON Schema Landscape
 
-To figure out a good first issue to work on, join our Slack workspace and visit the `#contribute` channel. This channel is specifically designed for onboarding and supporting new contributors.
+To identify good first issues to work on, join our Slack workspace and visit the `#contribute` channel. This channel is specifically designed for onboarding and supporting new contributors.
 
 You should also check out our [Contributing guidelines](./CONTRIBUTING.md).
 
 ### Contributors
 
-Thanks goes to these wonderful people who contributed to this website:
-<a href = "https://github.com/json-schema-org/website/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=json-schema-org/website"/>
+Thanks to these wonderful people who contributed to this website:
+<br />
+<a href="https://github.com/json-schema-org/website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=json-schema-org/website"/>
 </a>
 
 <sub>Made with [contributors-img](https://contrib.rocks).</sub>
@@ -114,27 +84,20 @@ Thanks goes to these wonderful people who contributed to this website:
 ### Backers
 
 **Thank you to all our backers!**
+
 [![Backers](https://opencollective.com/json-schema/backers.svg)](https://opencollective.com/json-schema/backers.svg?avatarHeight=90)
 
 ## Connect with the JSON Schema Community
 
 <p align="left">
-    <a href="https://json-schema.org/slack" target="blank">
-      <img align="center" src="https://img.icons8.com/color/48/null/slack-new.png" alt="JSON Schema Slack" height="30" width="40" />
-    </a>
-    <a href="https://twitter.com/jsonschema" target="blank">
-      <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="JSON Schema Twitter" height="30" width="40" />
-    </a>
-    <a href="https://www.linkedin.com/company/jsonschema" target="blank">
-      <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="JSON Schema LinkedIn" height="30" width="40" />
-    </a>
-    <a href="https://www.youtube.com/@JSONSchemaOrgOfficial" target="blank">
-      <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="JSON Schema YouTube" height="30" width="40" />
-    </a>
+  <a href="https://json-schema.org/slack" target="_blank" style="margin-right: 5px;"><img align="center" src="https://img.icons8.com/color/48/null/slack-new.png" alt="JSON Schema Slack" height="30" width="auto" /></a>
+  <a href="https://twitter.com/jsonschema" target="_blank" style="margin-right: 5px;"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="JSON Schema Twitter" height="30" width="auto" /></a>
+  <a href="https://www.linkedin.com/company/jsonschema" target="_blank" style="margin-right: 5px;"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="JSON Schema LinkedIn" height="30" width="auto" /></a>
+  <a href="https://www.youtube.com/@JSONSchemaOrgOfficial" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="JSON Schema YouTube" height="30" width="auto" /></a>
 </p>
 
 ## Inspired by
-This document has been inspired by [AsyncAPI website README.md](https://github.com/asyncapi/website/blob/master/README.md).
+This document was inspired by [AsyncAPI website README.md](https://github.com/asyncapi/website/blob/master/README.md).
 
 ## License
-The contents of this repository are [licensed under](./LICENSE) either the BSD 3-clause license *or* the Academic Free License v3.0.
+The contents of this repository are licensed under either the BSD 3-clause license *or* the Academic Free License v3.0. See [LICENSE](./LICENSE).

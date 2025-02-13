@@ -1,12 +1,20 @@
 ---
 title: "Annotations"
 section: docs
+prev: 
+  label: Generic keywords
+  url: /understanding-json-schema/reference/generic
+next: 
+  label: Comments
+  url: /understanding-json-schema/reference/comments
 ---
 
-JSON Schema includes a few keywords, that aren\'t strictly used for
+JSON Schema includes a few [keywords](../../learn/glossary#keyword), that aren\'t strictly used for
 validation, but are used to describe parts of a schema. None of these
 \"annotation\" keywords are required, but they are encouraged for good
 practice, and can make your schema \"self-documenting\".
+
+Annotation keywords can be used in any schema or sub-schemas. Like other keywords, they may be used once.
 
 The `title` and `description` keywords must be strings. A \"title\" will
 preferably be short, whereas a \"description\" will provide a more
@@ -41,7 +49,7 @@ you can set a value with a `PUT` request, but it would not be included
 when retrieving that record with a `GET` request.
 
 <Star label="New in draft 2019-09" />
-The `deprecated` keyword is a boolean that indicates that the instance
+The `deprecated` keyword is a boolean that indicates that the [instance](../../learn/glossary#instance)
 value the keyword applies to should not be used and may be removed in
 the future.
 

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2015",
+    "target": "ES2018",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -16,11 +16,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "react": [ "./node_modules/@types/react" ],
+      "react": ["./node_modules/@types/react"],
       "~/*": ["./*"],
       "@public/*": ["./public/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "svgr.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
