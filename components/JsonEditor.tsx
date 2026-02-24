@@ -743,7 +743,7 @@ export default function JsonEditor({
         {validation === 'invalid' && (
           <Alert
             variant='destructive'
-            className='text-white px-4 py-3 font-sans flex flex-row justify-end items-center bg-red-500/30 text-sm border-0 rounded-none'
+            className='text-white px-4 py-3 font-sans flex flex-row justify-end items-center bg-red-500/80 dark:bg-red-500/30 text-sm border-0 rounded-none'
             data-test='not-compliant-to-schema'
           >
             <Image
@@ -759,7 +759,7 @@ export default function JsonEditor({
         {validation === 'valid' && (
           <Alert
             variant='default'
-            className='text-white px-4 py-3 font-sans flex flex-row justify-end items-center bg-slate-500/30 text-sm border-0 rounded-none'
+            className='text-white px-4 py-3 font-sans flex flex-row justify-end items-center bg-slate-500/80 dark:bg-slate-500/30 text-sm border-0 rounded-none'
             data-test='compliant-to-schema'
           >
             <Image
