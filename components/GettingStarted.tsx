@@ -47,6 +47,7 @@ interface InstanceOption {
 
 const GettingStarted = () => {
   const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     fetchData()
@@ -63,6 +64,7 @@ const GettingStarted = () => {
           setFetchedInstance(instanceData);
           setInstances(initialInstance);
           setDetails(initialDetails);
+          setMounted(true);
         },
       )
       .catch((e) => console.log('Error: ', e));
@@ -129,6 +131,10 @@ const GettingStarted = () => {
     }
   };
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <>
       <div className='relative'>
@@ -168,7 +174,7 @@ const GettingStarted = () => {
                 marginBottom: 20,
                 maxWidth: '100%',
                 backgroundColor:
-                  resolvedTheme === 'dark' ? '#282c34' : '#f8fafc',
+                  resolvedTheme === 'dark' ? '#1e293b' : '#f8fafc',
                 border:
                   resolvedTheme === 'dark'
                     ? '1px solid #374151'
@@ -231,7 +237,7 @@ const GettingStarted = () => {
                 marginBottom: 20,
                 maxWidth: '100%',
                 backgroundColor:
-                  resolvedTheme === 'dark' ? '#282c34' : '#f8fafc',
+                  resolvedTheme === 'dark' ? '#1e293b' : '#f8fafc',
                 border:
                   resolvedTheme === 'dark'
                     ? '1px solid #374151'
@@ -260,7 +266,7 @@ const GettingStarted = () => {
           <h2 className='text-h6 font-semibold text-slate-900 dark:text-white'>
             Validation Result
           </h2>
-          <div className='flex dark:bg-[#282c34] bg-slate-100 justify-between items-center text-slate-800 dark:text-white font-medium flex-row border dark:border-slate-700 border-slate-300 p-5 rounded-xl'>
+          <div className='flex dark:bg-[#1e293b] bg-slate-100 justify-between items-center text-slate-800 dark:text-white font-medium flex-row border dark:border-slate-700 border-slate-300 p-5 rounded-xl'>
             <p className='text-slate-700 dark:text-slate-300'>{details[0]}</p>
 
             {details[1] ? (
